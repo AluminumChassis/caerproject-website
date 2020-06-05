@@ -176,7 +176,7 @@ a:hover {
     width: 100%;
     min-height: 600px;
     padding: 225px 0 175px;
-    background: var(--theme-red) url(../images/bg/promo.jpg) 0 0 no-repeat fixed;
+    background: url(../images/bg/promo.jpg) 0 0 no-repeat fixed;
     text-align: center;
     -webkit-background-size: cover;
     background-size: cover;
