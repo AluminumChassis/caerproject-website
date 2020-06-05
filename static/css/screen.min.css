@@ -17,7 +17,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,secti
     
     --theme-yellow-dark:#c9a100;
     --theme-orange-dark:#aa3102;
-    --theme-red-dark:#a11000;
+    --theme-red-dark:#961102;
     --theme-brown-dark:#793618;
     --theme-blue-dark:#005972;
 }
@@ -176,14 +176,14 @@ a:hover {
     width: 100%;
     min-height: 600px;
     padding: 225px 0 175px;
-    background: url(../images/bg/promo.jpg) 0 0 no-repeat fixed;
+    background: grey url(../images/bg/promo.jpg) 0 0 no-repeat fixed;
     text-align: center;
     -webkit-background-size: cover;
     background-size: cover;
 }
 .promo__inner {
-    padding: 5vh;
-    background-color: var(--theme-blue);
+    padding: 30px;
+    background-color: var(--theme-yellow);
     max-width: 1024px;
     margin: 0 auto;
 }
@@ -271,18 +271,18 @@ a:hover {
 .services__donate {
     width: 36%;
     height: 320px;
-    background-color: var(--theme-red);
+    background-color: var(--theme-blue);
     float: right;
     padding: 135px 0 0 40px;
 }
 .services__donate:hover {
-    background: var(--theme-red-dark);
+    background: var(--theme-blue-dark);
 }
 .services__news {
     width: 64%;
     height: 640px;
     padding: 65px 80px 0 0;
-    background-color: var(--theme-yellow);
+    background-color: var(--theme-red);
     background-image: url(../images/bg/news.jpg);
     background-position: left bottom;
     background-repeat: no-repeat;
@@ -300,8 +300,8 @@ a:hover {
 }
 .services__subscribe input[type="text"] {
     height: 45px;
-    background-color: var(--theme-yellow-dark);
-    color: var(--theme-brown);
+    background-color: var(--theme-red-dark);
+    color: var(--theme-red);
 }
 .services__subscribe input[type="submit"] {
     height: 45px;
@@ -331,21 +331,23 @@ a:hover {
     max-width: 320px;
     height: 320px;
     padding-top: 120px;
-    background-color: #3b5997;
+    background-color: var(--theme-orange);
     font-size: 16px;
     line-height: 22px;
     color: #fff;
     text-align: center;
 }
 .services__icon:hover {
-    background: #355088;
+    background: var(--theme-orange-dark);
 }
 .services__icon:before {
     content: "";
     display: block;
-    width: 35px;
-    height: 74px;
-    background: url(../images/fb-logo.png) 0 0 no-repeat;
+    width: 100px;
+    height: 100px;
+    background: url(../images/ig-logo.png) 0 0 no-repeat;
+        
+    background-size: contain;
     margin: 0 auto 30px;
 }
 .events {
@@ -564,26 +566,41 @@ a:hover {
     line-height: 22px;
     color: #606060;
 }
+#hamburger {
+    touch-action: manipulation;
+    float: right;
+    display: none;
+    height: 45px;
+    width: auto;
+    padding-right: 10px;
+}
 @media screen and (max-width: 960px) {
+        
+    #hamburger {
+        display: block;
+    }
     .page-header__inner {
         padding: 0 10px;
     }
-    .page-header__logo {
-        text-align: center;
+    .page-header__nav {
+        
         margin: 0 auto;
+        text-align: center;
         float: none;
     }
     .page-header__nav {
-        margin: 0 auto;
-        text-align: center;
-        float: none;
+        display:none;
+        width:100%
+    }
+    .nav a {
+        margin:auto;
+        display: block;
     }
     .promo {
         min-height: 400px;
         padding: 100px 0;
     }
     .promo__inner {
-        padding: 0 10px;
     }
     .events__inner {
         padding: 0 10px;
